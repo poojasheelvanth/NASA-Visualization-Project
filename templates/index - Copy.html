@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+    <style>
+*     {
+  box-sizing: border-box;
+}
+html,
+body   {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* styling our overall page */
+body     {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling our header */
+header   {
+  background: #222;
+  color: #FFF;
+  padding: 20px 30px;
+}
+
+/* logo */
+#logo         {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+  width: 49%;
+}
+#logo span   {
+  display: inline-block;
+}
+
+
+/* styling our footer */
+footer   {
+  background: #222;
+  color: #777;
+  padding: 40px;
+  text-align: center;
+}
+footer img   {
+  display: block;
+  border-radius: 5px;
+  width: 80px;
+  margin: 0 auto 10px;
+}
+
+/* styling our main content */
+.hero           {
+  min-height: 800px;
+  text-align: center;
+  background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/potw1933a_0.jpg');
+  background-size: cover;
+}
+.hero-content   {
+  color: #FFF;
+  padding-top: 130px;
+}
+.hero-content h1   {
+  font-size: 72px;
+  margin: 0;
+}
+.hero-content p    {
+  font-size: 36px;
+}
+
+
+/* basic site sections */
+.site-section   {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.site-section-secondary   {
+  background: #EFEFEF;
+}
+.site-section-inside   {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-header h2  {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 30;
+  color: #777;
+}
+
+
+/* testimonial boxes */
+.testimonial-box   {
+  display: inline-block;
+  width: 33%;
+  padding: 20px 30px;
+}
+.testimonial-author img {
+  float: left;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.testimonial-author h5   {
+  font-size: 18px;
+  margin: 0;
+  padding-top:15px;
+}
+.testimonial-author span {
+  font-size: 14px;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+    </style>
+
+    <title>NASA Data</title>
+
+    <!-- attach our stylesheet -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+ <!-- Latest compiled and minified JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+ <script src="cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+ 
+
+
+</head>
+<body>
+
+    <!-- the header -->
+    <header>
+
+        <!-- our main logo -->
+            <span>Space Watch</span>
+    </header>
+
+    <!-- the content -->
+    <main>
+
+        <!-- hero content -->
+        <div class="hero">
+            <!-- content for the hero -->
+            <div class="hero-content">
+                <h1 class="hero-title">Asteroids & Planets on the Move</h1>
+                <p>When will they strike?</p>
+
+                <!-- <a href="#" class="btn">Asteroids</a> -->
+                <a class="button"  target="_blank" href="static/Asteroids.html" >Asteroids</a>
+                <a class="button"  target="_blank" href="static/Planets.html" >Planets</a>
+            </div>
+        </div>
+        
+        <div class="site-section">
+        <div class="site-section-inside">
+
+
+            <div class="section-header">
+
+                <h2>Analysis</h2>
+            </div>
+            <div class="container">
+                                   
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                      <div class="item active" id="chartArea1">
+                    </div>
+                    <script src="static\logic.js"></script>
+                  <div class="item">
+                    <img src="https://unsplash.it/1400/600?image=62">
+                  </div>
+                  <div class="item">
+                    <img src="https://unsplash.it/1400/600?image=315">
+                  </div>
+                  <div class="item">
+                    <img src="https://unsplash.it/1400/600?image=622">
+                  </div>
+                </div>
+                </div>
+              
+              </div>
+            
+        
+            
+
+        <!-- testimonials section -->
+        <div class="site-section site-section-secondary">
+        <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2>Meet the Team</h2>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-author">
+                    <img src="static\vaidy.jpg" alt="Vaidy">
+                    <h5>Vaidy</h5>
+                    <span>Space Enthusiast</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-author">
+                    <img src="static\pooja.jpg" alt="Pooja">
+                    <h5>Pooja</h5>
+                    <span>Space Enthusiast</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+           <div class="testimonial-author">
+                    <img src="static\farah.jpg" alt="Farah">
+                    <h5>Farah</h5>
+                    <span>Space Enthusiast</span>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <!-- the footer -->
+    <footer>
+    </footer>
+
+</body>
+<script type="text/javascript"  src="carousel.js"></script>
+</html>

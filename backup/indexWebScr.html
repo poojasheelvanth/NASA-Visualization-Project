@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    
+  </div>
+
+  <div class="container">
+    <div class="jumbotron">
+  
+  <h2>Latest Mars News:</h2>
+  <h4>{{ vacation.news_title }}</h4>
+  <h5> {{ vacation.news_p }}</h5>
+
+</div>
+</div>
+   
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-8">
+          <section>
+            <h2>Featured Mars Image</h2>
+            <img src="{{ vacation.featured_image_url }}"  height="600" width="600"  alt="">        
+        </section>
+        
+
+        </div>
+        <div class="col-md-4">
+          <section>
+            <h2>Current Weather on Mars</h2>            
+            <h5 style="border:1px; border-style:solid; border-color:black; padding: 1em;">
+              {{ vacation.mars_weather}}
+              
+            </h5>
+            
+            <h2>Mars Facts</h2>
+            {{vacation.factshtml | safe}}
+            </iframe>
+          </section>
+        </div>
+      </div>
+      
+
+      <br>
+
+      <h2 align="center">Mars Hemispheres</h2> 
+
+    
+      <div class="row">
+  
+          <div class="col-md-6 pad top"> <br>
+  
+            <div class="pull-left">
+              <h3>{{vacation.hemisphere_image_urls[0].title}}</h3>
+              <img src={{vacation.hemisphere_image_urls[0].img_url}} alt="" width="100%" height="100%"></a>
+            </div>
+  
+          </div>
+  
+          <div class="col-md-6 pad top"> <br>
+  
+            <div class="pull-left">
+              <h3>{{vacation.hemisphere_image_urls[1].title}}</h3>
+              <img src={{vacation.hemisphere_image_urls[1].img_url}} alt="" width="100%" height="100%"></a>
+            </div>
+  
+          </div>
+  
+      </div>
+  
+      <div class="row">
+  
+          <div class="col-md-6 pad top"> <br>
+  
+            <div class="pull-left">
+              <h3>{{vacation.hemisphere_image_urls[2].title}}</h3>
+              <img src={{vacation.hemisphere_image_urls[2].img_url}} alt="" width="100%" height="100%"></a>
+            </div>
+  
+          </div>
+  
+          <div class="col-md-6 pad top"> <br>
+  
+            <div class="pull-left">
+              <h3>{{vacation.hemisphere_image_urls[3].title}}</h3>
+              <img src={{vacation.hemisphere_image_urls[3].img_url}} alt="" width="100%" height="100%"></a>
+            </div>
+  
+          </div>
+  
+      </div>  
+    </div>
+
+    
+
+  </div>
+  
+  
+  
+  
+</body>
+
+</html>

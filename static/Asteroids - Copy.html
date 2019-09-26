@@ -1,0 +1,82 @@
+<body>
+    <!DOCTYPE html>
+    <meta charset="utf-8">
+  
+    <style>
+        #chart {
+          margin-left: 0px;
+          height: 506px;
+        }
+        
+        text {
+          font: 10px sans-serif;
+        }
+        
+        .dot {
+          stroke: #000;
+        }
+        
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+        
+        .label {
+          fill: #777;
+        }
+        
+        .country {
+          font: 400 48px"Helvetica Neue";
+          text-anchor: center;
+          fill: #777;
+        }
+        
+        .year.label {
+          font: 400 120px"Helvetica Neue";
+          fill: #ddd;
+        }
+        
+        .year.label.active {
+          fill: #aaa;
+        }
+        
+        .hidden {
+          color: #f00;
+        }
+        
+        .visible {
+          color: #0f0;
+        }
+        
+        .overlay {
+          fill: none;
+          pointer-events: all;
+          cursor: ns-resize;
+        }
+        
+        .d3-tip {
+          line-height: 1;
+          font-family: Lucida Grande, Lucida Sans Unicode, Arial, Helvetica;
+          font-size: 12px;
+          padding: 12px;
+          background: #EFEFEF;
+          color: #253756;
+          border-width: 1px;
+          border-style: solid;
+          border-color: #000000;
+        }
+        </style>
+
+<h1> Asteroids Data</h1>
+<h2> From 2000 to 2016.</h2>
+<p id="chart"></p>
+
+<div id="bullseye"></div>
+
+<script src="https://d3js.org/d3.v2.js?2.8.1"></script>
+<script  type="text/javascript"  src="app.js"> </script>
+
+</body>
+
